@@ -1,12 +1,13 @@
-function calculateSalary(x){
-    if(x<= 1200){
-        x= 3*x/100+x
-    } else if(x>1200){
-        let bonusSalary= x-1200
-        let percentage= bonusSalary*5/100
-        x= +percentage+ x
+
+function calculateSalary(x,y){
+    let salarioFixo= x
+    let vendasRealizadas= y
+
+    if(vendasRealizadas<=salarioFixo){
+        return vendasRealizadas*3/100 + salarioFixo
+    } else{
+      return vendasRealizadas*5/100 + salarioFixo
     }
-    return "R$ "+ x
 }
 
 
